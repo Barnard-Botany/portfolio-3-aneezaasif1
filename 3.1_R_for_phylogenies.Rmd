@@ -96,6 +96,7 @@ This gives the labels of the tips of the phylogenetic tree but does not include 
 str("tr_primates")
 ```
 This gives the primary species (possibly family) we are going to be looking at in the phylogenetic tree.
+# No, this just tells us that `tr_primates` is a character or string variable, rather than numeric (i.e. words rather than numbers).
 ```{r}
 str(tr_primates)
 ```
@@ -183,7 +184,9 @@ attributes(tr_plantserr)
 
 ```{r}
 str(tr_plantscorr)
+str(tr_plantserr)
 ```
+# Make sure to call the correct variable. You haven't created `tr_plantscorr` yet, so this code won't work.
 
 ```{r}
 newick_str = "((((((Radish), Cabbage), Kale), Corn), Wheat), Sequoia);"
@@ -855,4 +858,4 @@ system(cmdstr)
 
 ```
 
-
+Everything worked great except for a few lines of code from 674 - 762. You're trying to call a variable called `p211`, but R is saying that it can't find a variable with that name. If you can fix this, push it back to GitHub and I can check it for full points.
